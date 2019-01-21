@@ -1,2 +1,3 @@
 # brand
-html/css + some js
+html/css + js reviews (on accessories page)
+
