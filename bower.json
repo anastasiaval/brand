@@ -1,0 +1,13 @@
+{
+  "name": "brand",
+  "authors": [
+    "Anastasia"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}

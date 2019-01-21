@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@import "variables"
+@import "mixins"
+
+*
+  margin: 0
+  padding: 0
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.container
+  max-width: $container-width
+  margin: 0 auto
+
+.content
+  width: $content-width
+  margin: 0 auto
+
+body
+  font-family: 'Lato', sans-serif
+  display: flex
+  flex-direction: column
+
+html,
+body
+  height: 100%
+
+.container-flex
+  flex: 1 0 auto
+
+.footer-flex
+  flex-shrink: 0
+
+@import "header"
+
+@import "index"
+
+// breadcrumbs
+.new-arrivals
+  background-color: #f8f3f4
+  height: 148px
+  &__text
+    display: flex
+    justify-content: space-between
+    text-transform: uppercase
+    &_h3
+      margin-top: 65px
+      color: #f16d7f
+      font-size: 24px
+      font-weight: 900
+
+.breadcrumbs
+  margin-top: 65px
+  &_link
+    +breadcrumbs-a
+    color: #636363
+    font-weight: 300
+    &:hover
+      color: $contrast-color
+  &_active-link
+    +breadcrumbs-a
+    color: $contrast-color
+    font-weight: 700
+
+@import "product"
+
+@import "shopping-cart"
+
+@import "checkout"
+
+@import "single-page"
+
+@import "footer"
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .featured__product:after
+    content: ''
+    position: absolute
+    bottom: 80px
+    width: 263px
+    top: 0
+    left: 0
+    background: rgba(58, 56, 56, 0.83)
+    opacity: 0
+    transition: opacity 1s
+  .featured__product:hover:after
+    opacity: 1
+  .trending-box:after
+    content: ''
+    position: absolute
+    bottom: 93px
+    width: 263px
+    top: 0
+    left: 0
+    background: rgba(58, 56, 56, 0.83)
+    opacity: 0
+    transition: opacity 1s
+  .trending-box:hover:after
+    opacity: 1

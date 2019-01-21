@@ -1,0 +1,259 @@
+@import "variables"
+@import "mixins"
+
+.product-page
+  display: flex
+  justify-content: space-between
+
+.sidebar
+  width: 243px
+  margin-top: 59px
+  &_summary
+    color: #ef5b70
+    font-size: 14px
+    font-weight: 700
+    padding: 12px 5px 14px 16px
+    border-bottom: 1px solid #ebebeb
+    border-left: 5px solid #ef5b70
+    cursor: pointer
+    text-transform: uppercase
+    display: flex
+    justify-content: space-between
+    outline: none
+    &::-webkit-details-marker
+      display: none
+    &:after
+      content: url(../img/fa-search.png)
+  &_details
+    margin-bottom: 25px
+    &[open] .sidebar_summary:after
+      content: url(../img/trng-pink.png)
+  &_a
+    text-decoration: none
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 33px
+    &:hover
+      color: #ef5b70
+
+.trending
+  width: 846px
+  margin: 71px auto 110px
+  &__sort-by
+    display: flex
+    justify-content: space-between
+    &_h5
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      margin-bottom: 25px
+  &__now
+    &_a
+      text-decoration: none
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 400
+      line-height: 26px
+      &:hover
+        color: #222222
+    &_span
+      padding: 0 13px
+      color: #dfdfdf
+      font-size: 14px
+      font-weight: 400
+  &__options
+    background-color: #f3f3f3
+    height: 50px
+    margin-bottom: 48px
+    padding: 10px
+    display: flex
+    &_span
+      +options-summary
+    &_summary
+      outline: none
+      margin-left: -1px
+      display: block
+      +options-summary
+      &::-webkit-details-marker
+        display: none
+      &:after
+        content: url(../img/fa-search.png)
+        padding-left: 18px
+    &_details
+      margin-right: 10px
+    &_details[open] .trending__options_summary:after
+      content: url(../img/trng-pink.png)
+    &_p
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 400
+      line-height: 26px
+      padding: 5px 32px 5px 13px
+      cursor: pointer
+      &:hover
+        background: #c4c4c4
+    &_p-sort-by
+      @extend .trending__options_p
+      padding-right: 45px
+    &_sort-by, .trending__options_show
+      border: 1px solid #ebebeb
+      background: $ground-color
+      margin-top: -1px
+      margin-left: -1px
+      z-index: 1
+      position: relative
+
+
+
+
+.trending__options_select:after
+  content: url(../img/fa-search.png)
+
+.size-box
+  display: flex
+  justify-content: space-between
+  width: 235px
+  &_label
+    font-family: 'Open Sans', sans-serif
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    &:hover
+      color: #222222
+  &_input
+    margin-bottom: 16px
+
+
+.trending-products
+  margin-bottom: 7px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  &_img
+    transition: filter 1s
+  &_link
+    text-decoration: none
+    width: 263px
+    display: block
+  &_name
+    color: #222222
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    +product-text
+  &_price
+    color: $contrast-color
+    font-size: 16px
+    font-weight: 700
+    +product-text
+  &_a-cart
+    position: absolute
+    top: 98px
+    left: 70px
+    padding: 11px 12px 11px 42px
+    font-size: 13px
+    font-weight: 700
+    background: url('../img/Forma1.svg') no-repeat 8px 8px
+    cursor: pointer
+    outline: none
+    display: none
+    z-index: 1
+    +trending-a-buttons
+    &:hover
+      outline: none
+      box-shadow: inset 0 0 1px 1px #ffffff
+  &_buttons
+    position: absolute
+    top: 147px
+    left: 70px
+    width: 123px
+    justify-content: space-between
+    display: none
+    z-index: 1
+  &_a-buttons
+    +trending-a-buttons
+    padding: 8px 19px
+    &:hover
+      box-shadow: inset 0 0 1px 1px #ffffff
+  &__bottom
+    display: flex
+    justify-content: space-between
+  &__view-all
+    text-decoration: none
+    padding: 15px 45px
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 300
+    border-radius: 3px
+    border: 1px solid #ef5b70
+    transition: color 500ms, background-color 500ms
+    &:hover
+      color: #ffffff
+      background-color: #ef5b70
+
+.trending-box
+  position: relative
+  margin-bottom: 36px
+  padding-bottom: 21px
+  transition: box-shadow 1s
+  &:hover .trending-products_a-cart
+    display: block
+  &:hover .trending-products_buttons
+    display: flex
+  &:hover
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16)
+  &:hover .trending-products_img
+    filter: brightness(23%)
+    opacity: 0.83
+
+.pagination
+  border-radius: 3px
+  border: 1px solid #ebebeb
+  width: 261px
+  height: 44px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  color: #c4c4c4
+  &_link
+    +pagination-a
+    color: #c4c4c4
+    &:hover
+      color: #ef5b70
+  &_link-fa
+    font-size: 20px
+    font-weight: 400
+  &_active-link
+    +pagination-a
+    color: #ef5b70
+  &_li
+    list-style-type: none
+
+.convenience-box
+  background: #222224
+  padding: 0 230px
+
+.convenience
+  display: flex
+  color: #fbfbfb
+  text-align: center
+  justify-content: space-between
+  &__delivery
+    +product-convenience-article
+    background: url(../img/car.svg) no-repeat 132px 98px
+  &__sales
+    +product-convenience-article
+    background: url(../img/percent.svg) no-repeat 134px 98px
+  &__quality
+    +product-convenience-article
+    background: url(../img/crown.svg) no-repeat 130px 98px
+  &_h3
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 12px
+  &_p
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px

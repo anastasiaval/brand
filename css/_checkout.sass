@@ -1,0 +1,129 @@
+@import "variables"
+@import "mixins"
+
+.mango-video
+  display: flex
+  justify-content: center
+  padding: 40px
+
+.checkout
+  margin-bottom: 93px
+  &_summary
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    padding: 33px 0 39px
+    text-transform: uppercase
+    border-bottom: 1px solid #e8e8e8
+    cursor: pointer
+    outline: none
+    display: block
+    &::-webkit-details-marker
+      display: none
+  &__details[open] .checkout_summary
+    border-bottom: none
+  &_p
+    color: #b3b2b2
+    font-size: 13px
+    font-weight: 400
+
+.future-box
+  padding-bottom: 34px
+  border-bottom: 1px solid #e8e8e8
+
+.register-flex
+  display: flex
+  justify-content: space-around
+  padding-bottom: 34px
+  border-bottom: 1px solid #e8e8e8
+  &_h4
+    color: #222222
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 15px
+
+.guest
+  &_label
+    color: #222222
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    line-height: 32px
+    padding-left: 10px
+  &_form
+    margin-top: 27px
+  &_ul
+    list-style: url(../img/list-icon.png) inside
+    margin-top: 33px
+    margin-bottom: 38px
+  &_li
+    color: #b3b2b2
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+  &_button
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    padding: 19px 53px
+    text-transform: uppercase
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    cursor: pointer
+    transition: border-color 500ms, background-color 500ms, color 500ms
+    &:hover
+      +guest-reg-button-hover
+
+#register-now
+  margin-bottom: 33px
+
+.registered
+  &_label
+    color: #222222
+    font-size: 12px
+    font-weight: 400
+    line-height: 20px
+  &__form
+    margin-top: 27px
+    &_p
+      color: #ff0d0d
+      margin-bottom: 32px
+  &_input
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    width: 390px
+    height: 45px
+    margin-top: 13px
+    margin-bottom: 18px
+    padding: 0 10px
+    outline: 0
+    &:invalid
+      box-shadow: none
+
+  &_button
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    padding: 19px 68px
+    text-transform: uppercase
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    cursor: pointer
+    transition: border-color 500ms, background-color 500ms, color 500ms
+    &:hover
+      +guest-reg-button-hover
+  &_a
+    color: #222222
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    text-decoration: none
+    margin-left: 32px
+    &:hover
+      color: #000
+      text-decoration: underline
+
+.required:after
+  color: #ff0d0d
+  content: " *"

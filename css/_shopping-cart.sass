@@ -1,0 +1,181 @@
+@import "variables"
+@import "mixins"
+
+.headings
+  border-bottom: $c-border
+  padding: 90px 0 20px
+  display: flex
+  h4
+    font-weight: 700
+
+.details
+  width: 510px
+  display: flex
+  &_img
+    height: 115px
+  &_text
+    margin-left: 21px
+    margin-top: 13px
+    h4
+      margin-bottom: 38px
+      font-weight: 400
+    p
+      color:  #575757
+      font-size: 13px
+      font-weight: 400
+      line-height: 20px
+    span
+      color:  #6f6e6e
+      font-size: 13px
+      font-weight: 300
+
+.in-cart img
+  transition: transform 1s
+
+.in-cart:hover img
+  transform: scale(1.07)
+
+.order h4
+  text-transform: uppercase
+  color: #222222
+  font-size: 13px
+
+.specification
+  width: 630px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  span
+    color:  #656565
+    font-size: 13px
+    font-weight: 400
+  input
+    border: $c-border
+    padding: 7px 0 7px 22px
+    font-size: 13px
+    font-weight: 400
+    width: 55px
+    margin-left: 10px
+  .fa
+    padding: 0 18px
+    color:  #c0c0c0
+    &:hover
+      color: #222222
+  .price
+    margin-left: 20px
+
+.in-cart
+  border-bottom: $c-border
+  padding: 25px 0
+  display: flex
+
+.order_buttons
+  display: flex
+  justify-content: space-between
+  padding: 44px 0 63px
+  a
+    text-transform: uppercase
+    border: $c-border
+    padding: 19px 39px
+    background-color: #ffffff
+    color:  #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-decoration: none
+    transition: border-color 500ms, background-color 500ms, color 500ms
+
+.order_buttons a:hover, .shipping button:hover, .coupon button:hover
+  border-color: #4a494a
+  background-color: #f2f2f2
+  color: #222224
+
+.order__total
+  display: flex
+  justify-content: space-between
+  padding-bottom: 79px
+  &_input
+    width: 355px
+    padding: 16px 18px
+    margin-bottom: 20px
+    outline: none
+    border: $c-border
+    color:  #222222
+    font-size: 13px
+    font-weight: 300
+    &::placeholder
+      color:  #b1b1b1
+      opacity: 1
+    &:-ms-input-placeholder
+      color:  #b1b1b1
+    &::-webkit-input-placeholder
+      color:  #b1b1b1
+  h3
+    color:  #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    padding-bottom: 22px
+  .grand_total
+    display: flex
+    justify-content: space-between
+    padding-left: 110px
+    margin-left: 43px
+    width: 275px
+    border-bottom: $c-border
+    margin-bottom: 17px
+    span
+      color: $contrast-color
+      font-weight: 700
+      font-size: 16px
+
+.shipping, .coupon
+  width: 355px
+  button
+    color:  #4a4a4a
+    font-size: 11px
+    font-weight: 700
+    padding: 12px 14px
+    text-transform: uppercase
+    border: $c-border
+    background-color: #ffffff
+    cursor: pointer
+    transition: border-color 500ms, background-color 500ms, color 500ms
+
+.coupon
+  p
+    color:  #000000
+    font-size: 14px
+    font-weight: 300
+    margin-bottom: 24px
+
+.grand
+  background-color: #f5f3f3
+  width: 360px
+  height: 214px
+  p
+    color:  #4a4a4a
+    font-size: 11px
+    font-weight: 400
+    text-transform: uppercase
+  .sub_total
+    display: flex
+    justify-content: space-between
+    width: 101px
+    margin: 40px 0 14px 218px
+  a
+    text-transform: uppercase
+    text-decoration: none
+    background-color: $contrast-color
+    margin-left: 44px
+    padding: 18px 42px
+    color:  #ffffff
+    font-size: 16px
+    font-weight: 700
+    line-height: 50px
+    transition: color 500ms, background-color 500ms, outline 500ms
+
+.grand a:hover
+  color: $contrast-color
+  background-color: #ffffff
+  outline: 1px solid $contrast-color
+

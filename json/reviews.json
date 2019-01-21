@@ -1,0 +1,17 @@
+{
+  "result": 1,
+  "reviews": [
+    {
+      "id": 2,
+      "text": "This is my second review!",
+      "author": "Someone else",
+      "verified": 1
+    },
+    {
+      "id": 1,
+      "text": "This is my first review!",
+      "author": "Someone",
+      "verified": 1
+    }
+  ]
+}

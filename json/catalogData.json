@@ -1,0 +1,86 @@
+[
+  {
+    "id_product": 101,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer2.jpg"
+  },
+  {
+    "id_product": 102,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer3.jpg"
+  },
+  {
+    "id_product": 103,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer4.jpg"
+  },
+  {
+    "id_product": 104,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer5.jpg"
+  },
+  {
+    "id_product": 105,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer6.jpg"
+  },
+  {
+    "id_product": 106,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer7.jpg"
+  },
+  {
+    "id_product": 107,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer8.jpg"
+  },
+  {
+    "id_product": 108,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer9.jpg"
+  },
+  {
+    "id_product": 121,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer121.jpg"
+  },
+  {
+    "id_product": 122,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer122.jpg"
+  },
+  {
+    "id_product": 123,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer45.jpg"
+  },
+  {
+    "id_product": 124,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer47.jpg"
+  },
+  {
+    "id_product": 125,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer49.jpg"
+  },
+  {
+    "id_product": 126,
+    "product_name": "Mango People T-shirt",
+    "price": 52.00,
+    "img_cart": "../img/cart/Layer50.jpg"
+  }
+]

@@ -1,0 +1,169 @@
+@import "variables"
+@import "mixins"
+
+.new-arrivals-slider
+  border: 1px solid #eaeaea
+  background-color: #f7f7f7
+  height: 777px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &_a
+    background-color: rgba(42, 42, 42, 0.15)
+    padding: 13px 19px
+    text-decoration: none
+    &:hover
+      background-color: #a4a4a4
+  &_img
+    margin-top: -15px
+  &_fa
+    color: #ffffff
+    font-size: 24px
+    font-weight: 400
+
+.product-description
+  margin-top: -86px
+  border: 1px solid #eaeaea
+  background-color: #ffffff
+  height: 730px
+  position: relative
+  text-align: center
+  padding: 73px 250px 122px
+  &_h5
+    color: #f16d7f
+    font-size: 14px
+    font-weight: 700
+    padding-bottom: 15px
+    border-bottom: 1px solid #eaeaea
+  &__border-pink
+    background-color: #ef5b70
+    width: 63px
+    height: 3px
+    display: block
+    margin: 14px auto
+    position: relative
+  &_h4
+    color: #4d4d4d
+    font-size: 18px
+    font-weight: 900
+    text-transform: uppercase
+    margin-top: 13px
+  &__article
+    margin-top: 67px
+    color: #5e5e5e
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+  &__info
+    display: flex
+    justify-content: space-between
+    margin: 28px 140px 37px
+    &_p
+      color: #b9b9b9
+      font-size: 14px
+      font-weight: 700
+    &_span
+      color: #2f2f2f
+  &_price
+    color: #ef5b70
+    font-size: 24px
+    font-weight: 700
+    padding: 0 294px 43px
+    border-bottom: 1px solid #eaeaea
+
+.product-order
+  margin: 63px 50px 0
+  display: flex
+  justify-content: space-between
+  &_label
+    color: #2f2f2f
+    font-size: 14px
+    font-weight: 700
+  &_select
+    margin-top: 16px
+    padding: 0 14px
+    border: 1px solid #eaeaea
+    background: url(../img/arrow.png) no-repeat 126px 15px
+    width: 144px
+    height: 35px
+    outline: none
+    -moz-appearance: none
+    -webkit-appearance: none
+    color: #bcbcbc
+    font-size: 13px
+    font-weight: 400
+    &::-ms-expand
+      display: none
+
+#product-order_submit
+  width: 537px
+  margin-top: 28px
+  background: url(../img/Forma1copy.svg) no-repeat 207px 16px
+  border: 1px solid #ef5b70
+  color: #ef5b70
+  font-size: 16px
+  font-weight: 700
+  padding-top: 23px
+  padding-bottom: 21px
+  padding-left: 40px
+  cursor: pointer
+  transition: background-color 1s
+
+#product-order_submit:hover
+  background-color: #f8f3f4
+  outline: 1px solid #ef5b70
+
+#quantity
+  padding-left: 17px
+  color: #bcbcbc
+  font-size: 14px
+  font-weight: 400
+  line-height: 35px
+  border: 1px solid #eaeaea
+  margin-top: 14px
+
+.form_color,
+.form_size,
+.form_quantity
+  text-align: left
+
+.similar
+  margin-top: 119px
+  margin-bottom: 73px
+  &_h4
+    color: #4d4d4d
+    font-size: 24px
+    font-weight: 900
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 72px
+
+.similar-products
+  display: flex
+  justify-content: space-between
+  &__link
+    text-decoration: none
+    width: 261px
+    display: block
+    transition: box-shadow 1s
+    &:hover
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16)
+  &__product-img
+    background-color: #e9e9e9
+    width: 261px
+    height: 280px
+    display: flex
+    justify-content: center
+    align-items: center
+  &_product-price
+    color: #f16d7f
+    font-size: 16px
+    font-weight: 700
+    padding-bottom: 21px
+    +product-name-price
+  &_product-name
+    color: #222222
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    +product-name-price

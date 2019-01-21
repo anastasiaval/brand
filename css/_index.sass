@@ -1,0 +1,252 @@
+@import "variables"
+@import "mixins"
+
+.slider
+  background-color: #e8e8e8
+  height: 662px
+  &__photo
+    background: url(../img/slider.jpg) 0 -52px
+    height: 613px
+    display: flex
+    align-items: center
+  &__text
+    border-left: 12px solid #f16d7f
+    padding-left: 12px
+    margin-bottom: 70px
+    &_h2
+      color: #222222
+      font-size: 61px
+      font-weight: 900
+      line-height: 41px
+      letter-spacing: 0.9px
+    &_h3
+      color: #222222
+      font-size: 40px
+      font-weight: 900
+      margin-top: 22px
+      line-height: 29px
+      letter-spacing: 1.1px
+    &_span
+      color: #f16d7f
+
+.offer
+  margin-top: 100px
+  margin-bottom: 93px
+  display: flex
+  justify-content: space-between
+  &__box
+    height: 823px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-left: 8px
+    margin-right: 12px
+  &__men
+    +offer-box-b
+    background: url(../img/Layer30.jpg)
+    margin-bottom: 20px
+  &__accessories
+    +offer-box-s
+    background: url(../img/Layer37.jpg)
+  &__women
+    +offer-box-s
+    background: url(../img/Layer32.jpg)
+    margin-bottom: 20px
+  &__kids
+    +offer-box-b
+    background: url(../img/Layer31.jpg)
+  &_a
+    text-decoration: none
+    display: inline-block
+    margin-top: 27px
+    background: $ground-color
+    padding: 11px 17px
+    font-weight: 900
+    text-transform: uppercase
+  &_h5
+    color: #222222
+    font-size: 18px
+    letter-spacing: 0.6px
+  &_h6
+    color: #f16d7f
+    font-size: 30px
+    letter-spacing: 0.5px
+
+.featured
+  &_h3
+    color: #222222
+    font-size: 30px
+    font-weight: 700
+    text-align: center
+    letter-spacing: 0.8px
+    margin-left: 20px
+  &_h6
+    color: #9f9f9f
+    font-size: 13px
+    font-weight: 400
+    margin-top: 7px
+    margin-bottom: 59px
+    margin-left: 18px
+    text-align: center
+    letter-spacing: 0.8px
+  &__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__product
+    position: relative
+    margin-bottom: 38px
+    padding-bottom: 21px
+    transition: box-shadow 1s
+    &:hover .featured__add
+      display: block
+    &:hover
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16)
+    &:hover .featured__product_img
+      filter: brightness(23%)
+      opacity: 0.83
+    &_a
+      text-decoration: none
+    &_name
+      color: #222222
+      font-size: 13px
+      font-weight: 400
+      text-transform: uppercase
+      +featured-p
+    &_price
+      color: #f16d7f
+      font-size: 16px
+      font-weight: 700
+      +featured-p
+    &_img
+      width: 263px
+      height: 281px
+      margin-bottom: 2px
+      transition: filter 1s
+  &__add
+    position: absolute
+    top: 98px
+    left: 70px
+    display: none
+    z-index: 1
+    &_button
+      cursor: pointer
+      outline: none
+      padding: 10px 13px 14px 40px
+      border: 1px solid #fff
+      color: #ffffff
+      font-size: 13px
+      font-weight: 700
+      background: url('../img/Forma1.svg') no-repeat 8px 8px
+      transition: box-shadow 500ms
+      &:hover
+        box-shadow: inset 0 0 1px 1px #ffffff
+  &__browse-all
+    display: flex
+    justify-content: center
+    &_a
+      background-color: $contrast-color
+      text-decoration: none
+      color: #ffffff
+      font-size: 16px
+      font-weight: 700
+      padding: 15px 18px 15px 23px
+      text-align: center
+      display: block
+      margin-top: 19px
+      margin-bottom: 116px
+      margin-left: 20px
+      letter-spacing: 0.5px
+      transition: background-color 500ms, color 500ms, outline 500ms
+      &:hover
+        background-color: $ground-color
+        color: $contrast-color
+        outline: 1px solid $contrast-color
+      &:hover .fa-long-arrow-right
+        animation-name: browse-all-arrow
+        animation-duration: 1s
+        animation-timing-function: ease-in-out
+        animation-iteration-count: 3
+        animation-delay: 300ms
+    &_fa
+      margin-left: 6px
+
+@keyframes browse-all-arrow
+  17%
+    -webkit-transform: translateX(6px)
+    transform: translateX(6px)
+  33%
+    -webkit-transform: translateX(-5px)
+    transform: translateX(-5px)
+  50%
+    -webkit-transform: translateX(4px)
+    transform: translateX(4px)
+  67%
+    -webkit-transform: translateX(-2px)
+    transform: translateX(-2px)
+  83%
+    -webkit-transform: translateX(1px)
+    transform: translateX(1px)
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+
+.season-offer
+  height: 529px
+  margin-bottom: 97px
+  background: #222224
+  display: flex
+  justify-content: space-between
+
+  &__pic
+    width: 767px
+    background: url(../img/Layer38.jpg) no-repeat
+    &_a
+      text-decoration: none
+      display: inline-block
+      margin-top: 133px
+      margin-left: 37px
+      color: #ffffff
+      font-weight: 700
+      text-transform: uppercase
+    &_h5
+      font-size: 53px
+      letter-spacing: 1.7px
+      line-height: 61px
+    &_span
+      color: $contrast-color
+    &_h4
+      font-size: 32px
+      letter-spacing: 1px
+  &__convenience
+    color: #fbfbfb
+    margin-top: 55px
+    margin-bottom: 61px
+    padding-right: 43px
+    width: 373px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &_h3
+      font-size: 20px
+      font-weight: 700
+      margin-bottom: 12px
+    &_p
+      font-size: 14px
+      font-weight: 300
+      line-height: 24px
+
+.delivery,
+.sales,
+.quality
+  padding-left: 113px
+
+.delivery
+  background: url(../img/car.svg) no-repeat 36px 0
+
+.sales
+  background: url(../img/percent.svg) no-repeat 36px 0
+
+.quality
+  background: url(../img/crown.svg) no-repeat 36px 0
+
